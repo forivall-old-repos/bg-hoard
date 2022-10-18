@@ -7,6 +7,11 @@
       "factory": "./src/generators/util-lib/generator",
       "schema": "./src/generators/util-lib/schema.json",
       "description": "customized util library generator"
+    },
+    "update-scope-schema": {
+      "factory": "./src/generators/update-scope-schema/generator",
+      "schema": "./src/generators/update-scope-schema/schema.json",
+      "description": "modifying files"
     }
   }
 }
