@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          fetch-depth: 1
+          fetch-depth: 0
       - uses: bahmutov/npm-install@v1
       - uses: nrwl/nx-set-shas@v2
         with:
