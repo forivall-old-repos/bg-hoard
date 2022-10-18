@@ -56,6 +56,10 @@
               {
                 "sourceTag": "scope:api",
                 "onlyDependOnLibsWithTags": ["scope:api", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:app",
+                "onlyDependOnLibsWithTags": ["scope:app", "scope:shared"]
               }
             ]
           }

@@ -26,24 +26,28 @@ function normalizeOptions(tree: Tree, options: UtilLibGeneratorSchema): Normaliz
   const parsedTags = options.tags
     ? options.tags.split(',').map((s) => s.trim())
     : [];
+  if (!parsedTags.includes('type:util')) {
+    parsedTags.unshift('type:util');
+  }
   const autoScope = `scope:${options.directory}`
   if (!parsedTags.includes(autoScope)) {
     parsedTags.unshift(autoScope);
   }
 
   return {
-    skipBabelrc: true,
     ...options,
+    skipBabelrc: true,
+    name,
     projectName,
     projectRoot,
     projectDirectory,
     parsedTags,
+    tags: parsedTags.join(',')
   };
 }
 
 export default async function (tree: Tree, _options: UtilLibGeneratorSchema) {
   const options = normalizeOptions(tree, _options);
-  console.log(options.name)
   await libraryGenerator(tree, options)
   await formatFiles(tree);
 }
