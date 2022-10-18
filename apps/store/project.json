@@ -70,6 +70,13 @@
         "proxyConfig": "apps/store/proxy.conf.json"
       }
     },
+    "deploy": {
+      "executor": "nx:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npx surge dist/apps/store ${SURGE_DOMAIN} --token ${SURGE_TOKEN}"
+      }
+    },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
