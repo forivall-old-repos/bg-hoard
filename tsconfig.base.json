@@ -25,5 +25,9 @@
       "@bg-hoard/util-interface": ["libs/util-interface/src/index.ts"]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": ["node_modules", "tmp"],
+  "ts-node": {
+    "transpileOnly": true,
+    "transpiler": "sucrase/ts-node-plugin"
+  }
 }
