@@ -1,12 +1,18 @@
 import { TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { RouterTestingModule } from '@angular/router/testing';
+import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+      imports: [
+        RouterTestingModule,
+        HttpClientTestingModule,
+        StoreUiSharedModule,
+      ],
       declarations: [AppComponent, NxWelcomeComponent],
     }).compileComponents();
   });
