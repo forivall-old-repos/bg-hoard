@@ -1,0 +1,33 @@
+name: Deploy to prod
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  SURGE_DOMAIN_STORE: ${{ secrets.SURGE_DOMAIN_STORE }}
+  SURGE_TOKEN: ${{ secrets.SURGE_TOKEN }}
+  HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+
+jobs:
+  deploy-store:
+    runs-on: ubuntu-latest
+    name: Deploy apps
+    environment: production
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - uses: bahmutov/npm-install@v1
+      - run: "npx nx run store:deploy --prod"
+  deploy-api:
+    runs-on: ubuntu-latest
+    name: Deploy apps
+    environment: production
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+      - uses: bahmutov/npm-install@v1
+      - run: "npx nx run api:deploy --prod"

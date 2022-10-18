@@ -22,7 +22,7 @@ const games: Game[] = [
   },
   {
     id: 'purrfection',
-    name: 'Purrfection',
+    name: 'Purrfection 2',
     image: '/assets/cat.png', // 'https://media.giphy.com/media/12xMvwvQXJNx0k/giphy.gif',
     description: 'A cat grooming contest goes horribly wrong.',
     price: 45,

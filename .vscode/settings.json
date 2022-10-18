@@ -10,5 +10,12 @@
     "node_modules/[^.][^s]*": true,
     "node_modules/[^.]?[^c]*": true
   },
-  "eslint.validate": ["json"]
+  "eslint.validate": [
+    "json"
+  ],
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": [
+      ".github/workflows/deploy.yml"
+    ],
+  }
 }
