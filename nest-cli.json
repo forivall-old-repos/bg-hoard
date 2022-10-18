@@ -1,0 +1,29 @@
+{
+  "monorepo": true,
+  "root": "apps/bg-hoard",
+  "sourceRoot": "apps/bg-hoard/src",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/bg-hoard/tsconfig.app.json"
+  },
+  "projects": {
+    "bg-hoard": {
+      "type": "application",
+      "root": "apps/bg-hoard",
+      "entryFile": "main",
+      "sourceRoot": "apps/bg-hoard/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bg-hoard/tsconfig.app.json"
+      }
+    },
+    "videos": {
+      "type": "application",
+      "root": "apps/videos",
+      "entryFile": "main",
+      "sourceRoot": "apps/videos/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/videos/tsconfig.app.json"
+      }
+    }
+  }
+}

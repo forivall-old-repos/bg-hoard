@@ -1,5 +1,4 @@
 export interface UtilLibGeneratorSchema {
-    name: string;
-    tags?: string;
-    directory: string;
+  name: string;
+  directory: 'api' | 'store' | 'videos' | 'shared';
 }
