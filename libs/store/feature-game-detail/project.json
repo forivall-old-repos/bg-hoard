@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/store/feature-game-detail/src",
   "prefix": "bg-hoard",
+  "tags": ["scope:store", "type:feature"],
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
@@ -22,6 +23,5 @@
         ]
       }
     }
-  },
-  "tags": []
+  }
 }

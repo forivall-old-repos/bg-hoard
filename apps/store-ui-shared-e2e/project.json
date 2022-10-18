@@ -3,6 +3,8 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/store-ui-shared-e2e/src",
   "projectType": "application",
+  "tags": ["scope:store", "type:e2e"],
+  "implicitDependencies": ["store-ui-shared"],
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
@@ -24,7 +26,5 @@
         "lintFilePatterns": ["apps/store-ui-shared-e2e/**/*.{js,ts}"]
       }
     }
-  },
-  "tags": [],
-  "implicitDependencies": ["store-ui-shared"]
+  }
 }

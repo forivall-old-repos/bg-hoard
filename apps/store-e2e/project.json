@@ -3,6 +3,7 @@
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/store-e2e/src",
   "projectType": "application",
+  "tags": ["scope:store", "type:e2e"],
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
@@ -25,6 +26,5 @@
       }
     }
   },
-  "tags": [],
   "implicitDependencies": ["store"]
 }

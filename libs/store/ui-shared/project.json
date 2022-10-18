@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/store/ui-shared/src",
   "prefix": "bg-hoard",
+  "tags": ["scope:store", "type:ui"],
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
@@ -51,6 +52,5 @@
         }
       }
     }
-  },
-  "tags": []
+  }
 }
