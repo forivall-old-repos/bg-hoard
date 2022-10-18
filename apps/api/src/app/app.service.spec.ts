@@ -13,9 +13,9 @@ describe('AppService', () => {
     service = app.get<AppService>(AppService);
   });
 
-  describe('getData', () => {
-    it('should return "Welcome to api!"', () => {
-      expect(service.getData()).toEqual({ message: 'Welcome to api!' });
+  describe('getAllGames', () => {
+    it('should return all games', () => {
+      expect(service.getAllGames()).toHaveLength(3);
     });
   });
 });
