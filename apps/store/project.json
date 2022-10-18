@@ -75,7 +75,8 @@
       "outputs": [],
       "options": {
         "command": "npx surge dist/apps/store ${SURGE_DOMAIN} --token ${SURGE_TOKEN}"
-      }
+      },
+      "dependsOn": ["build"]
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
