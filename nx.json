@@ -1,6 +1,7 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "bg-hoard",
+  "defaultProject": "api",
   "tasksRunnerOptions": {
     "default": {
       "runner": "nx/tasks-runners/default",
@@ -61,5 +62,7 @@
       "style": "css"
     }
   },
-  "defaultProject": "api"
+  "implicitDependencies": {
+    ".github/workflows/ci.yml": "*"
+  }
 }
