@@ -1,0 +1,17 @@
+{
+  "name": "meta-internal-plugin-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "meta/internal-plugin-e2e/src",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/nx-plugin:e2e",
+      "options": {
+        "target": "..-meta-internal-plugin:build",
+        "jestConfig": "meta/internal-plugin-e2e/jest.config.ts"
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["meta-internal-plugin"]
+}

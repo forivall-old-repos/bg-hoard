@@ -8,6 +8,7 @@
     "**/Thumbs.db": true,
     "node_modules/[^.j]*": true,
     "node_modules/[^.][^s]*": true,
-    "node_modules/[^.]?[^c]*": true,
-  }
+    "node_modules/[^.]?[^c]*": true
+  },
+  "eslint.validate": ["json"]
 }
